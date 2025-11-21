@@ -1,0 +1,5 @@
+{
+  "name": "Atmosphere AI",
+  "description": "A premium, AI-powered weather dashboard combining Open-Meteo precision with Gemini intelligence.",
+  "requestFramePermissions": []
+}
