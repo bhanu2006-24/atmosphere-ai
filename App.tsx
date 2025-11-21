@@ -6,7 +6,7 @@ import { LiveMap } from './components/LiveMap';
 import { Careers } from './components/Careers';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { TermsOfService } from './components/TermsOfService';
-import { CloudLightning, Github, Twitter, Linkedin } from 'lucide-react';
+import { CloudLightning, Github, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -64,10 +64,32 @@ const App: React.FC = () => {
                 The world's most advanced weather telemetry platform. Precision data for modern explorers, built with passion and code.
               </p>
               <div className="flex gap-4 pt-2">
-                 <a href="#" className="text-slate-400 hover:text-white transition-colors"><Twitter className="w-5 h-5" /></a>
-                 <a href="#" className="text-slate-400 hover:text-white transition-colors"><Github className="w-5 h-5" /></a>
-                 <a href="#" className="text-slate-400 hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
+                <a
+                  href="https://instagram.com/krishna_websites"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://github.com/bhanu2006-24"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/bhanu-saini-3bb251391/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
               </div>
+
             </div>
 
             {/* Product Links - Cleaned */}
@@ -91,10 +113,10 @@ const App: React.FC = () => {
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-600 text-sm">
-              © 2024 Atmosphere AI Inc. All rights reserved.
+              © 2025 Atmosphere AI Inc. All rights reserved.
             </p>
             <div className="flex items-center gap-1 text-sm text-slate-500">
               Built with <span className="text-red-500">♥</span> by <span className="text-white font-medium">Bhanu Pratap Saini</span>

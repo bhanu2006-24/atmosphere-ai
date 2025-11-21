@@ -21,7 +21,7 @@
 
 <div align="center">
 
-## 🌐 **[Visit Atmosphere AI →](https://atmosphereai.pages.dev)**
+## 🌐 **[Visit Atmosphere AI →](https://atmosphere-ai.pages.dev)**
 
 *Experience the live platform and explore real-time weather data across the globe*
 
@@ -78,7 +78,7 @@
 
 - **Node.js** (v16 or higher)
 - **npm** or **yarn**
-- **Gemini API Key** ([Get one here](https://ai.google.dev/))
+
 
 ### Installation
 
@@ -93,19 +93,12 @@
    npm install
    ```
 
-3. **Set up environment variables**
-   
-   Create a `.env.local` file in the root directory:
-   ```env
-   GEMINI_API_KEY=your_gemini_api_key_here
-   ```
-
-4. **Run the development server**
+3. **Run the development server**
    ```bash
    npm run dev
    ```
 
-5. **Open your browser**
+4. **Open your browser**
    
    Navigate to `http://localhost:5173` to see the app in action!
 
@@ -147,7 +140,6 @@ atmosphere-ai/
 │   └── cities.ts       # 300+ cities database
 ├── services/
 │   ├── weatherService.ts  # Weather API integration
-│   └── aiService.ts    # Gemini AI integration
 ├── types.ts            # TypeScript type definitions
 ├── App.tsx             # Main app component
 ├── index.tsx           # App entry point
@@ -184,8 +176,6 @@ Beautiful, data-rich weather dashboard with real-time updates.
 ### Interactive Map
 Click anywhere on the globe to get instant weather information.
 
-### AI Insights
-Get intelligent weather analysis powered by Google Gemini.
 
 ---
 
