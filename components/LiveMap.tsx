@@ -8,9 +8,9 @@ export const LiveMap: React.FC = () => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);
   const [loading, setLoading] = useState(true);
-  
+
   // Select top global cities for the map
-  const mapCities = CITIES.slice(0, 50); 
+  const mapCities = CITIES.slice(0, 100);
 
   useEffect(() => {
     let mounted = true;
@@ -36,7 +36,7 @@ export const LiveMap: React.FC = () => {
         setLoading(true);
         const coords = mapCities.map(c => ({ lat: c.lat, lon: c.lon }));
         const weatherData = await getBatchWeather(coords);
-        
+
         if (!mounted) return;
 
         // Clear existing markers if any (though we only init once)
@@ -48,7 +48,7 @@ export const LiveMap: React.FC = () => {
 
         weatherData.forEach((weather, idx) => {
           if (!weather) return;
-          
+
           const city = mapCities[idx];
           const color = getTempColor(weather.temperature);
 
@@ -93,7 +93,7 @@ export const LiveMap: React.FC = () => {
               </div>
             </div>
           `;
-          
+
           marker.bindPopup(popupContent);
         });
 
@@ -126,7 +126,7 @@ export const LiveMap: React.FC = () => {
   return (
     <div className="h-[calc(100vh-120px)] w-full glass-panel rounded-3xl overflow-hidden relative animate-fade-in border border-white/10 shadow-2xl">
       <div ref={mapContainerRef} className="w-full h-full bg-[#0f172a]" />
-      
+
       {loading && (
         <div className="absolute inset-0 z-[1000] bg-[#0f172a]/80 flex flex-col items-center justify-center backdrop-blur-sm transition-opacity duration-500">
           <Loader2 className="w-12 h-12 text-blue-500 animate-spin mb-4" />
@@ -136,8 +136,8 @@ export const LiveMap: React.FC = () => {
 
       <div className="absolute bottom-8 left-8 z-[400] glass-panel px-6 py-4 rounded-2xl border border-white/10 shadow-xl pointer-events-none">
         <div className="flex items-center gap-2 mb-1">
-           <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-           <h3 className="text-sm font-bold text-white tracking-wide">LIVE GLOBAL VIEW</h3>
+          <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+          <h3 className="text-sm font-bold text-white tracking-wide">LIVE GLOBAL VIEW</h3>
         </div>
         <p className="text-xs text-slate-400">Real-time telemetry from {mapCities.length} major hubs</p>
       </div>
